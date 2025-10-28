@@ -2,6 +2,7 @@
   "name": "the-market-pl",
   "version": "1.0.0",
   "description": "Backend for THE MARKET PL - eBay-style marketplace",
+  "license": "UNLICENSED",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -11,7 +12,7 @@
     "mongoose": "^7.5.0",
     "dotenv": "^16.3.1",
     "cors": "^2.8.5",
-    "jsonwebtoken": "^9.1.0",
+    "jsonwebtoken": "^9.0.2",
     "stripe": "^12.17.0",
     "bcryptjs": "^2.4.3"
   },
@@ -19,4 +20,3 @@
     "node": ">=18.x"
   }
 }
-
