@@ -3,6 +3,7 @@ const router = express.Router();
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const auth = require('../middlewares/auth');
 
+
 router.post('/checkout', auth, async (req, res) => {
   const { amount, currency = 'usd' } = req.body;
   try {
@@ -15,3 +16,4 @@ router.post('/checkout', auth, async (req, res) => {
 });
 
 module.exports = router;
+
