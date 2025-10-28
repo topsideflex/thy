@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Product = require('./Product');
-const auth = require('./auth');
+const Product = require('../models/Product');
+const auth = require('../middlewares/auth');
 
-
-// Get all products
 router.get('/', async (req, res) => {
   try {
     const products = await Product.find().populate('user', 'name email');
@@ -14,7 +12,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Create product
 router.post('/', auth, async (req, res) => {
   const { name, description, price, imageUrl } = req.body;
   try {
@@ -27,3 +24,4 @@ router.post('/', auth, async (req, res) => {
 });
 
 module.exports = router;
+
